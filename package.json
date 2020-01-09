@@ -1,5 +1,5 @@
 {
-  "name": "angular1-templateurl-loader",
+  "name": "angularjs-templateurl-loader",
   "version": "1.0.1",
   "description": "Webpack loader that inlines all html for AngularJS components/directives.",
   "main": "index.js",
@@ -13,19 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tmarun/angular1-templateurl-loader.git"
+    "url": "git+https://github.com/linyf0721/angularjs-templateurl-loader.git"
   },
   "keywords": [
     "angularjs",
     "webpack",
     "loader"
   ],
-  "author": "Arunagiri TM",
+  "author": "Linyf TM",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tmarun/angular1-templateurl-loader/issues"
-  },
-  "homepage": "https://github.com/tmarun/angular1-templateurl-loader#readme",
+  "homepage": "https://github.com/linyf0721/angularjs-templateurl-loader#readme",
   "devDependencies": {
     "codecov": "^2.1.0",
     "istanbul": "^0.4.5",

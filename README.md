@@ -16,18 +16,18 @@ Webpack loader that inlines all html for AngularJS code that specifies a `templa
 
 ### Installation
 
-Option 1: Install from [npm](https://www.npmjs.com/package/angular1-templateurl-loader).
+Option 1: Install from [npm](https://www.npmjs.com/package/angularjs-templateurl-loader).
 
-- `npm install angular1-templateurl-loader --save-dev`
+- `npm install angularjs-templateurl-loader --save-dev`
 
-Option 2: Install from [yarn](https://yarnpkg.com/en/package/angular1-templateurl-loader).
+Option 2: Install from [yarn](https://yarnpkg.com/en/package/angularjs-templateurl-loader).
 
-- `yarn add angular1-templateurl-loader --dev`
+- `yarn add angularjs-templateurl-loader --dev`
 
-Chain the `angular1-templateurl-loader` to your currently used TypeScript loader.
+Chain the `angularjs-templateurl-loader` to your currently used TypeScript loader.
 
 ```js
-loaders: ['awesome-typescript-loader', 'angular1-templateurl-loader'],
+loaders: ['awesome-typescript-loader', 'angularjs-templateurl-loader'],
 ```
 
 ### Requirements
@@ -42,7 +42,7 @@ This loader allows you to decouple templates from the component file. This is pa
 
 #### Webpack
 
-Here is an example markup of the `webpack.config.js`, which chains the `angular1-templateurl-loader` to the `awesome-typescript-loader`
+Here is an example markup of the `webpack.config.js`, which chains the `angularjs-templateurl-loader` to the `awesome-typescript-loader`
 Will resolve for the template from the resolve.root, in this case the current directory of the file or in the app's root directory
 
 ```js
@@ -59,7 +59,7 @@ module: {
           loader: 'awesome-typescript-loader'
         },
         {
-          loader: 'angular1-templateurl-loader'
+          loader: 'angularjs-templateurl-loader'
 
         }
       ]
@@ -86,14 +86,14 @@ angular.module("my-module").component("my-component", {
 
 ```js
 angular.module("my-module").component("my-component", {
-  template: require('/myComponent.html" ,
+  template: require('/myComponent.html").default ,
   controller: "MyController"
 });
 ```
 
 ### How does it work
 
-The `angular1-templateurl-loader` searches for `templateUrl` declarations inside of the AngularJS files and replaces the paths with the corresponding `require` statement.
+The `angularjs-templateurl-loader` searches for `templateUrl` declarations inside of the AngularJS files and replaces the paths with the corresponding `require` statement.
 If `relativeTo: '/some/absolute/path'` is added to the loader's options, ALL templates will loaded in relation to the specified path instead of the current directory.
 
 The generated `require` statements will be handled by the given loader for `.html` files.
